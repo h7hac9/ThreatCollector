@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from ConfigParser import ConfigParser
+from datetime import datetime
 
 import scrapy
 
@@ -20,6 +21,8 @@ class HostsFileSpider(scrapy.Spider):
         conf.read("scrapy.cfg")
         last_last_build = conf.get(self.name, "last_build")
 
+        now = datetime.utcnow()
+
         if last_last_build != last_build:
             conf.set(self.name, "last_build", last_build)
             conf.write(open("scrapy.cfg", "w+"))
@@ -32,8 +35,9 @@ class HostsFileSpider(scrapy.Spider):
                 elements = description.split("<br>")
                 host_file_item["ip"] = elements[1].split(":")[1].strip(" ")
                 host_file_item["host_class"] = elements[2].split(":")[1].strip(" ")
-                host_file_item["add_time"] = message_line.css("pubDate::text").extract()[0]
+                host_file_item["submit_time"] = message_line.css("pubDate::text").extract()[0]
                 host_file_item["last_build"] = last_build
+                host_file_item["add_time"] = now
 
                 yield host_file_item
 

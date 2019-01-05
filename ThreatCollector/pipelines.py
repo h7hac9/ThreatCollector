@@ -6,6 +6,7 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import pymongo
+from ConfigParser import ConfigParser
 
 import ThreatCollector.settings as setting
 
@@ -26,13 +27,18 @@ class MongoDBPipeline(object):
 
     def process_item(self, item, spider):
 
+        config = ConfigParser()
+        config.read("scrapy.cfg")
+
         table = self.db[spider.name]
 
         if spider.name == "hosts-file":
-            table.ensure_index("host_name")
+            table.create_index("host_name")
+            table.create_index("add_time", expireAfterSeconds=int(config.get(spider.name, "expire_time")))
 
         if spider.name == "blocklist-de":
             table.ensure_index("ip")
+            table.create_index("add_time", expireAfterSeconds=int(config.get(spider.name, "expire_time")))
 
         quote_into = dict(item)
         table.insert(quote_into)

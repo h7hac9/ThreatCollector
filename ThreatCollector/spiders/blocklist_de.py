@@ -21,7 +21,7 @@ class BlocklistDeSpider(scrapy.Spider):
         re_result = re.match(r'(.*)/(?P<type>.*?)\.txt', response.url)
         ip_type = re_result.groupdict().get("type")
 
-        now = datetime.now().strftime("%a, %d %b %Y %H:%M %Z")
+        now = datetime.utcnow()
 
         for ip in response.body.split("\n"):
             block_ip = BlockListDEItem()

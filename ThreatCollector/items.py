@@ -21,6 +21,7 @@ class HostsFileItem(scrapy.Item):
     host_class = scrapy.Field()
     add_time = scrapy.Field()
     last_build = scrapy.Field()
+    submit_time = scrapy.Field()
 
 
 class BlockListDEItem(scrapy.Item):
