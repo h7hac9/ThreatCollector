@@ -90,6 +90,6 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-MONGODB_HOST = "127.0.0.1"
+MONGODB_HOST = "192.168.99.100"
 MONGODB_PORT = 27017
 MONGODB_DBNAME = "threatcollector"
