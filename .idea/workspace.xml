@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e0da1c9-297e-4f9d-9a13-89f71ea00aa2" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy.cfg" afterDir="false" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,13 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="506">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-=======
-            <state relative-caret-position="422">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
+            <state relative-caret-position="264">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#194#208#0" expanded="true" />
               </folding>
@@ -40,56 +25,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/settings.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+            <state relative-caret-position="126">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="309">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-=======
-            <state relative-caret-position="518">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-              <folding>
-                <element signature="e#25#29#0" expanded="true" />
-              </folding>
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
+            <state relative-caret-position="624">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-=======
-            <state relative-caret-position="240">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="470">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -97,11 +58,6 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="DaemonShao &lt;daemonshao@gmail.com&gt;" />
-      </list>
-    </option>
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,19 +69,22 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/docs/threat collector.md" />
-        <option value="$PROJECT_DIR$/ThreatCollector/pipelines.py" />
-        <option value="$PROJECT_DIR$/ThreatCollector/items.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini" />
         <option value="$PROJECT_DIR$/crawl.ini" />
         <option value="$PROJECT_DIR$/scrapy.cfg" />
         <option value="$PROJECT_DIR$/ThreatCollector/settings.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" />
+        <option value="$PROJECT_DIR$/ThreatCollector/items.py" />
+        <option value="$PROJECT_DIR$/ThreatCollector/pipelines.py" />
+        <option value="$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="42" />
+    <option name="y" value="30" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -133,11 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-=======
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,22 +99,29 @@
               <item name="ThreatCollector" type="b2602c69:ProjectViewProjectNode" />
               <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ThreatCollector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
+              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThreatCollector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
+              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-=======
       <pane id="Scope" />
       <pane id="PackagesPane" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546682470383" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546670564313" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -197,42 +158,35 @@
       <updated>1546571820167</updated>
       <workItem from="1546571823986" duration="10983000" />
       <workItem from="1546669862574" duration="242000" />
-<<<<<<< HEAD
-      <workItem from="1546670138689" duration="626000" />
-      <workItem from="1546681126707" duration="150000" />
+      <workItem from="1546670138689" duration="417000" />
+      <workItem from="1546672061399" duration="1863000" />
+      <workItem from="1546680824506" duration="4549000" />
     </task>
-    <task id="LOCAL-00001" summary="Added profile support for loop listening collection">
-      <created>1546670646564</created>
+    <task id="LOCAL-00001" summary="Fixed looping listener">
+      <created>1546682272683</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1546670646564</updated>
-=======
-      <workItem from="1546670138689" duration="417000" />
-      <workItem from="1546672061399" duration="1863000" />
-      <workItem from="1546680824506" duration="1368000" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
+      <updated>1546682272683</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added blocklist.de threat intelligence acquisition">
+      <created>1546694073764</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546694073764</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="12001000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20386267" />
-=======
-    <option name="totallyTimeSpent" value="14873000" />
+    <option name="totallyTimeSpent" value="18054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -240,23 +194,18 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
-=======
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.39111593" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.3286991" />
       <window_info anchor="bottom" id="Python Console" order="12" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -276,8 +225,9 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ThreatCollector" />
     </ignored-roots>
-    <MESSAGE value="Added profile support for loop listening collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added profile support for loop listening collection" />
+    <MESSAGE value="Fixed looping listener" />
+    <MESSAGE value="Added blocklist.de threat intelligence acquisition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added blocklist.de threat intelligence acquisition" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/threat collector.md">
@@ -295,9 +245,6 @@
     <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/scrapy/http/response/__init__.py" />
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py" />
     <entry file="file://$USER_HOME$/venv/bin/scrapy" />
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -307,62 +254,6 @@
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="506">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-=======
-        <state relative-caret-position="422">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
-          <folding>
-            <element signature="e#194#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
-=======
-    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-=======
     <entry file="file://$PROJECT_DIR$/ThreatCollector/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -370,14 +261,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="624">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#25#29#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="true" />
           </folding>
->>>>>>> 8a4e11b9c6bfa430a446c43da00b5c72071d3caa
         </state>
       </provider>
     </entry>
