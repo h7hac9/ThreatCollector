@@ -17,11 +17,13 @@ class HostsFileSpider(scrapy.Spider):
         last_build = response.css("channel lastBuildDate::text").extract()[0]
 
         conf = ConfigParser()
-        conf.read("crawl.ini")
+        conf.read("scrapy.cfg")
         last_last_build = conf.get(self.name, "last_build")
 
         if last_last_build != last_build:
             conf.set(self.name, "last_build", last_build)
+            conf.write(open("scrapy.cfg", "w+"))
+
             for message_line in response.css("channel item"):
                 host_file_item = HostsFileItem()
                 host_file_item['host_name'] = message_line.css("title::text").extract()[0]
@@ -34,3 +36,5 @@ class HostsFileSpider(scrapy.Spider):
                 host_file_item["last_build"] = last_build
 
                 yield host_file_item
+
+        print "========>Synchronization Complete<========"

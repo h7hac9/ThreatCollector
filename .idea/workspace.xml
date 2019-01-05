@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e0da1c9-297e-4f9d-9a13-89f71ea00aa2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy.cfg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="422">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#194#208#0" expanded="true" />
               </folding>
@@ -31,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1870">
-              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+            <state relative-caret-position="374">
+              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -40,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+            <state relative-caret-position="518">
+              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding>
                 <element signature="e#25#29#0" expanded="true" />
               </folding>
@@ -50,10 +53,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini">
+        <entry file="file://$PROJECT_DIR$/scrapy.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="240">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -66,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="312">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -87,14 +90,16 @@
       <list>
         <option value="$PROJECT_DIR$/docs/threat collector.md" />
         <option value="$PROJECT_DIR$/ThreatCollector/pipelines.py" />
-        <option value="$PROJECT_DIR$/ThreatCollector/settings.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/items.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini" />
+        <option value="$PROJECT_DIR$/crawl.ini" />
+        <option value="$PROJECT_DIR$/scrapy.cfg" />
+        <option value="$PROJECT_DIR$/ThreatCollector/settings.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -104,7 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,21 +116,11 @@
               <item name="ThreatCollector" type="b2602c69:ProjectViewProjectNode" />
               <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ThreatCollector" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
-              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ThreatCollector" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
-              <item name="ThreatCollector" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -135,9 +129,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546670564313" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\John\Documents\Project\ThreatCollector" />
+      <recent name="C:\Users\John\Documents\Project\ThreatCollector\ThreatCollector" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -164,17 +165,19 @@
       <workItem from="1546571823986" duration="10983000" />
       <workItem from="1546669862574" duration="242000" />
       <workItem from="1546670138689" duration="417000" />
+      <workItem from="1546672061399" duration="1863000" />
+      <workItem from="1546680824506" duration="1368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11642000" />
+    <option name="totallyTimeSpent" value="14873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20100144" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -182,7 +185,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -191,8 +194,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.39111593" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.3286991" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -214,13 +218,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/threat collector.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -232,72 +229,57 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/.gitattributes" />
-    <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/pymongo/collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="1965" column="8" selection-start-line="1961" selection-start-column="11" selection-end-line="1965" selection-end-column="8" />
-        </state>
-      </provider>
+    <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/pymongo/collection.py" />
+    <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/scrapy/http/response/__init__.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py" />
+    <entry file="file://$USER_HOME$/venv/bin/scrapy" />
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/scrapy/http/response/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/crawl.ini">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/venv/bin/scrapy">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="312">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="422">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#194#208#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="374">
+          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        <state relative-caret-position="518">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding>
             <element signature="e#25#29#0" expanded="true" />
           </folding>
