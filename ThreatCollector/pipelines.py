@@ -9,6 +9,7 @@ import pymongo
 
 import ThreatCollector.settings as setting
 
+
 class ThreatcollectorPipeline(object):
     def process_item(self, item, spider):
         return item
@@ -25,9 +26,13 @@ class MongoDBPipeline(object):
 
     def process_item(self, item, spider):
 
+        table = self.db[spider.name]
+
         if spider.name == "hosts-file":
-            table = self.db[spider.name]
             table.ensure_index("host_name")
+
+        if spider.name == "blocklist-de":
+            table.ensure_index("ip")
 
         quote_into = dict(item)
         table.insert(quote_into)
