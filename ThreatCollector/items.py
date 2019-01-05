@@ -28,3 +28,10 @@ class BlockListDEItem(scrapy.Item):
     ip = scrapy.Field()
     type = scrapy.Field()
     add_time = scrapy.Field()
+
+
+class PhishtankItem(scrapy.Item):
+    phishing_site = scrapy.Field()
+    status = scrapy.Field()
+    submit_time = scrapy.Field()
+    add_time = scrapy.Field()

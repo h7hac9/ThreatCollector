@@ -34,12 +34,14 @@ class MongoDBPipeline(object):
 
         if spider.name == "hosts-file":
             table.create_index("host_name")
-            table.create_index("add_time", expireAfterSeconds=int(config.get(spider.name, "expire_time")))
 
         if spider.name == "blocklist-de":
             table.ensure_index("ip")
-            table.create_index("add_time", expireAfterSeconds=int(config.get(spider.name, "expire_time")))
 
+        if spider.name == "phishtank":
+            table.ensure_index("phishing_site")
+
+        table.create_index("add_time", expireAfterSeconds=int(config.get(spider.name, "expire_time")))
         quote_into = dict(item)
         table.insert(quote_into)
         return item
