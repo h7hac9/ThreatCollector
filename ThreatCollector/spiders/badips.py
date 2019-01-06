@@ -23,9 +23,17 @@ class BadipsSpider(scrapy.Spider):
     def detailed_parse(self, response):
         bad_ip = BadipsItem()
         bad_ip["ip"] = response.css("div.overview-info p.badips b::text").extract_first()
-        bad_ip["category"] = response.css("div.overview-info p.badips a.badips::text").extract_first()
+
+        category_list = response.css("div.overview-info ul li a::text").extract()
+        if len(category_list) != 0:
+            categorys = self.handle_arrays(category_list)
+            bad_ip["category"] = categorys
+            bad_ip["located"] = response.css("div.overview-info p.badips a.badips::text").extract()[0]
+        else:
+            bad_ip["category"] = response.css("div.overview-info p.badips a.badips::text").extract_first()
+            bad_ip["located"] = response.css("div.overview-info p.badips a.badips::text").extract()[2]
+
         bad_ip["score"] = response.css("div.overview-info p.badips a.badips::text").extract()[1]
-        bad_ip["located"] = response.css("div.overview-info p.badips a.badips::text").extract()[3]
 
         message = response.css("div.overview-info p.badips::text").extract()[-1]
         result = re.search(r'(.*)\son\s(?P<submit_time>.*)\.', message)
@@ -45,3 +53,13 @@ class BadipsSpider(scrapy.Spider):
             next_list_index = next.index("next page>")
             next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
             scrapy.Request(next_uri, callback=self.next_page_parse)
+
+    def handle_arrays(self, src_list):
+
+        dst_list = []
+
+        for subscript in xrange(len(src_list)):
+            if subscript % 2 == 0:
+                dst_list.append(src_list[subscript])
+
+        return dst_list
