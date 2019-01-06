@@ -35,3 +35,12 @@ class PhishtankItem(scrapy.Item):
     status = scrapy.Field()
     submit_time = scrapy.Field()
     add_time = scrapy.Field()
+
+
+class BadipsItem(scrapy.Item):
+    ip = scrapy.Field()
+    category = scrapy.Field()
+    score = scrapy.Field()
+    located = scrapy.Field()
+    submit_time = scrapy.Field()
+    add_time = scrapy.Field()
