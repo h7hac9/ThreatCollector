@@ -2,6 +2,7 @@
 import scrapy
 import re
 from datetime import datetime
+from ConfigParser import ConfigParser
 
 from ThreatCollector.items import BadipsItem
 
@@ -11,14 +12,40 @@ class BadipsSpider(scrapy.Spider):
     allowed_domains = ['badips.com']
     start_urls = ['https://www.badips.com/info']
 
+    conf = ConfigParser()
+    conf.read("scrapy.cfg")
+
     def parse(self, response):
         uris = response.css("div#content a").xpath("@href").extract()
 
-        for uri in uris[2:len(uris)-1]:
-            yield scrapy.Request(response.urljoin(uri.strip("\n")), callback=self.detailed_parse)
+        last_id = self.conf.get(self.name, "last_id")
 
-        next_uri = response.css("p.badips a.badips").xpath("@href").extract_first()
-        yield scrapy.Request(response.urljoin(next_uri.strip("\n")), callback=self.next_page_parse)
+        ids = response.css("div#content a::text").xpath("@href").extract()
+
+        if last_id == "":
+            end_locate = len(uris)-1
+            next = response.css("div#content>p.badips>a::text").extract()
+
+            if "next page>" in next:
+                next_list_index = next.index("next page>")
+                next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
+                yield scrapy.Request(next_uri, callback=self.next_page_parse)
+        else:
+            if last_id in ids[2:len(ids)-1]:
+                end_locate = ids.index(last_id)
+                self.conf.set(self.name, "last_id", last_id)
+
+            else:
+                end_locate = len(uris)-1
+                next = response.css("div#content>p.badips>a::text").extract()
+
+                if "next page>" in next:
+                    next_list_index = next.index("next page>")
+                    next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
+                    yield scrapy.Request(next_uri, callback=self.parse)
+
+        for uri in uris[2:end_locate]:
+            yield scrapy.Request(response.urljoin(uri.strip("\n")), callback=self.detailed_parse)
 
     def detailed_parse(self, response):
         bad_ip = BadipsItem()
@@ -52,7 +79,7 @@ class BadipsSpider(scrapy.Spider):
         if "next page>" in next:
             next_list_index = next.index("next page>")
             next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
-            scrapy.Request(next_uri, callback=self.next_page_parse)
+            yield scrapy.Request(next_uri, callback=self.next_page_parse)
 
     def handle_arrays(self, src_list):
 
