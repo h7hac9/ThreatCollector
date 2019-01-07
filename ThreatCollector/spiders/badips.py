@@ -20,19 +20,22 @@ class BadipsSpider(scrapy.Spider):
 
         last_id = self.conf.get(self.name, "last_id")
 
-        ids = response.css("div#content a::text").xpath("@href").extract()
+        ids = response.css("div#content a::text").extract()
 
         if last_id == "":
             end_locate = len(uris)-1
+            self.conf.set(self.name, "last_id", ids[2].strip("\n"))
+            self.conf.write(open("scrapy.cfg","w+"))
             next = response.css("div#content>p.badips>a::text").extract()
-
             if "next page>" in next:
                 next_list_index = next.index("next page>")
                 next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
                 yield scrapy.Request(next_uri, callback=self.next_page_parse)
         else:
-            if last_id in ids[2:len(ids)-1]:
-                end_locate = ids.index(last_id)
+            if last_id+"\n" in ids[2:len(ids)-1]:
+                self.conf.set(self.name, "last_id", ids[2])
+                self.conf.write(open("scrapy.cfg", "w+"))
+                end_locate = ids.index(last_id+"\n")
                 self.conf.set(self.name, "last_id", last_id)
 
             else:
