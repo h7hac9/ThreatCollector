@@ -18,8 +18,9 @@ class PhishtankSpider(scrapy.Spider):
     def parse(self, response):
         last_id = response.css("tr td a::text").extract_first()
         short_urls = response.css("tr td a").xpath("@href").extract()
+        find_id = self.config.get(self.name, "last_id")
 
-        if self.config.get(self.name, "last_id") == "":
+        if find_id == "":
 
             self.config.set(self.name, "last_id", last_id)
             self.config.write(open("scrapy.cfg", "w+"))
@@ -31,13 +32,11 @@ class PhishtankSpider(scrapy.Spider):
             next_right_short_url = response.css("td b a").xpath("@href").extract_first()
             yield scrapy.Request(response.urljoin(next_right_short_url), callback=self.next_page_parse)
 
-        elif self.config.get(self.name, "last_id") != last_id:
-            if int(last_id) > int(self.config.get(self.name, "last_id")):
-                self.config.set(self.name, "last_id", last_id)
-                self.config.write(open("scrapy.cfg", "w+"))
+        elif find_id != last_id:
 
-            if "phish_detail.php?phish_id="+self.config.get(self.name, "last_id") in short_urls:
-                last_index = short_urls.index("phish_detail.php?phish_id="+self.config.get(self.name, "last_id"))
+            if "phish_detail.php?phish_id="+find_id in short_urls:
+                last_index = short_urls.index("phish_detail.php?phish_id="+find_id)
+
             else:
                 last_index = len(short_urls)
                 if len(response.css("td b a").xpath("@href").extract()) > 1:
@@ -46,6 +45,10 @@ class PhishtankSpider(scrapy.Spider):
                 else:
                     next_short_url = response.css("td b a").xpath("@href").extract_first()
                     yield scrapy.Request(response.urljoin(next_short_url), callback=self.parse)
+
+            if int(last_id) > int(self.config.get(self.name, "last_id")):
+                self.config.set(self.name, "last_id", last_id)
+                self.config.write(open("scrapy.cfg", "w+"))
 
             for short_url in short_urls[:last_index]:
                 if "phish_id" in short_url:
