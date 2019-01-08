@@ -10,7 +10,7 @@ from ThreatCollector.items import PhishtankItem
 class PhishtankSpider(scrapy.Spider):
     name = 'phishtank'
     allowed_domains = ['phishtank.com']
-    start_urls = ['https://phishtank.com/phish_search.php?verified=u&active=y']
+    start_urls = ['http://phishtank.com/phish_archive.php']
 
     config = ConfigParser()
     config.read("scrapy.cfg")
@@ -35,8 +35,9 @@ class PhishtankSpider(scrapy.Spider):
 
             if "phish_detail.php?phish_id="+self.config.get(self.name, "last_id") in short_urls:
                 last_index = short_urls.index("phish_detail.php?phish_id="+ self.config.get(self.name, "last_id"))
-                self.config.set(self.name, "last_id", last_id)
-                self.config.write(open("scrapy.cfg", "w+"))
+                if int(last_id) > int(self.config.get(self.name, "last_id")) :
+                    self.config.set(self.name, "last_id", last_id)
+                    self.config.write(open("scrapy.cfg", "w+"))
             else:
                 last_index = len(short_urls)
                 if len(response.css("td b a").xpath("@href").extract()) > 1:

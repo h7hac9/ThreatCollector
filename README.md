@@ -16,7 +16,21 @@
 * WRZ : 从事销售，分发或提供warez（包括但不限于keygens，连续出版物等）的网站，此类条款不包含恶意软件
 
 
-## 二、www.blocklist.de 威胁情报采集
+## 二、blocklist.de 威胁情报采集
 ssh 、 mail 、 apache  、 imap  、 ftp  、 sip  、 bots  、 strongips  、 ircbot  、 bruteforcelogin 
 
 * 每48小时更新一次
+
+
+## 三、phishtank.com 威胁情报采集
+
+网络钓鱼类
+
+## 四、badips 威胁情报采集
+
+恶意IP类
+
+## 五、ransomwaretracker.abuse.ch 威胁情报采集
+
+勒索欺诈类
+
