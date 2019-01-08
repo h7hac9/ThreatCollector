@@ -44,3 +44,17 @@ class BadipsItem(scrapy.Item):
     located = scrapy.Field()
     submit_time = scrapy.Field()
     add_time = scrapy.Field()
+
+
+class RansomwaretrackerItem(scrapy.Item):
+    submit_time = scrapy.Field()
+    threat = scrapy.Field()
+    malware = scrapy.Field()
+    host = scrapy.Field()
+    url = scrapy.Field()
+    status = scrapy.Field()
+    register = scrapy.Field()
+    ip = scrapy.Field()
+    asn = scrapy.Field()
+    country = scrapy.Field()
+    add_time = scrapy.Field()
