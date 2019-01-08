@@ -50,7 +50,7 @@ class BadipsSpider(scrapy.Spider):
                     next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
                     yield scrapy.Request(next_uri, callback=self.parse)
 
-        for uri in uris[1:end_locate]:
+        for uri in uris[2:end_locate]:
             yield scrapy.Request(response.urljoin(uri.strip("\n")), callback=self.detailed_parse)
 
     def detailed_parse(self, response):
