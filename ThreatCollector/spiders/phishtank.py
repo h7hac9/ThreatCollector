@@ -15,6 +15,8 @@ class PhishtankSpider(scrapy.Spider):
     config = ConfigParser()
     config.read("scrapy.cfg")
 
+    config_new_id = "0"
+
     def parse(self, response):
         last_id = response.css("tr td a::text").extract_first()
         short_urls = response.css("tr td a").xpath("@href").extract()
@@ -36,6 +38,8 @@ class PhishtankSpider(scrapy.Spider):
 
             if "phish_detail.php?phish_id="+find_id in short_urls:
                 last_index = short_urls.index("phish_detail.php?phish_id="+find_id)
+                self.config.set(self.name, "last_id", self.config_new_id)
+                self.config.write(open("scrapy.cfg", "w+"))
 
             else:
                 last_index = len(short_urls)
@@ -46,9 +50,8 @@ class PhishtankSpider(scrapy.Spider):
                     next_short_url = response.css("td b a").xpath("@href").extract_first()
                     yield scrapy.Request(response.urljoin(next_short_url), callback=self.parse)
 
-            if int(last_id) > int(self.config.get(self.name, "last_id")):
-                self.config.set(self.name, "last_id", last_id)
-                self.config.write(open("scrapy.cfg", "w+"))
+            if int(last_id) > int(self.config_new_id):
+                self.config_new_id = last_id
 
             for short_url in short_urls[:last_index]:
                 if "phish_id" in short_url:
