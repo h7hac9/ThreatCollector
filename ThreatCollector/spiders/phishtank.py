@@ -32,12 +32,12 @@ class PhishtankSpider(scrapy.Spider):
             yield scrapy.Request(response.urljoin(next_right_short_url), callback=self.next_page_parse)
 
         elif self.config.get(self.name, "last_id") != last_id:
+            if int(last_id) > int(self.config.get(self.name, "last_id")):
+                self.config.set(self.name, "last_id", last_id)
+                self.config.write(open("scrapy.cfg", "w+"))
 
             if "phish_detail.php?phish_id="+self.config.get(self.name, "last_id") in short_urls:
-                last_index = short_urls.index("phish_detail.php?phish_id="+ self.config.get(self.name, "last_id"))
-                if int(last_id) > int(self.config.get(self.name, "last_id")) :
-                    self.config.set(self.name, "last_id", last_id)
-                    self.config.write(open("scrapy.cfg", "w+"))
+                last_index = short_urls.index("phish_detail.php?phish_id="+self.config.get(self.name, "last_id"))
             else:
                 last_index = len(short_urls)
                 if len(response.css("td b a").xpath("@href").extract()) > 1:
