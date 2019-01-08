@@ -17,6 +17,8 @@ class PhishtankSpider(scrapy.Spider):
 
     config_new_id = "0"
 
+    count = 0
+
     def parse(self, response):
         last_id = response.css("tr td a::text").extract_first()
         short_urls = response.css("tr td a").xpath("@href").extract()
@@ -74,11 +76,13 @@ class PhishtankSpider(scrapy.Spider):
         yield phishtank
 
     def next_page_parse(self, response):
+        self.count += 1
         short_urls = response.css("tr td a").xpath("@href").extract()
 
-        for short_url in short_urls:
-            if "phish_id" in short_url:
-                yield scrapy.Request(response.urljoin(short_url), callback=self.detailed_parse)
+        if self.count < 5000:
+            for short_url in short_urls:
+                if "phish_id" in short_url:
+                    yield scrapy.Request(response.urljoin(short_url), callback=self.detailed_parse)
 
-        next_right_short_url = response.css("td b a").xpath("@href").extract()[1]
-        yield scrapy.Request(response.urljoin(next_right_short_url), callback=self.next_page_parse)
+            next_right_short_url = response.css("td b a").xpath("@href").extract()[1]
+            yield scrapy.Request(response.urljoin(next_right_short_url), callback=self.next_page_parse)
