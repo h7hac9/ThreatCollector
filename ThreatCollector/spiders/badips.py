@@ -15,6 +15,8 @@ class BadipsSpider(scrapy.Spider):
     conf = ConfigParser()
     conf.read("scrapy.cfg")
 
+    queue_set = []
+
     def parse(self, response):
         uris = response.css("div#content a").xpath("@href").extract()
 
@@ -32,8 +34,9 @@ class BadipsSpider(scrapy.Spider):
                 next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
                 yield scrapy.Request(next_uri, callback=self.next_page_parse)
         else:
+            self.queue_set.append(ids[2])
             if last_id+"\n" in ids[2:len(ids)-1]:
-                self.conf.set(self.name, "last_id", ids[2])
+                self.conf.set(self.name, "last_id", self.queue_set[0])
                 self.conf.write(open("scrapy.cfg", "w+"))
                 end_locate = ids.index(last_id+"\n")
                 self.conf.set(self.name, "last_id", last_id)
