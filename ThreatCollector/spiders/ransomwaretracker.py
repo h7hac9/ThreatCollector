@@ -26,17 +26,23 @@ class RansomwaretrackerSpider(scrapy.Spider):
                                "{} spider information".format(self.name),
                                email_message)
 
-        yield scrapy.Request(url='http://ansomwaretracker.abuse.ch/', callback=self.parse)
+        yield scrapy.Request(url='https://ransomwaretracker.abuse.ch/feeds/csv/', callback=self.parse)
 
     def parse(self, response):
 
         last_time = self.config.get(self.name, "last_time")
-        if last_time != response.body.split("\n")[9].split(",")[1]:
+
+        print response.body.split("\n")[9].replace("\"","").split(",")[0]
+
+        if last_time != response.body.split("\n")[9].replace("\"","").split(",")[0]:
+
+            self.config.set(self.name, "last_time", response.body.split("\n")[9].replace("\"","").split(",")[0])
+            self.config.write(open("scrapy.cfg", "w+"))
 
             for line in response.body.split("\n"):
 
                 if line.startswith("#") is not True:
-                    record = line.split(",")
+                    record = line.replace("\"", "").split(",")
                     ransomitem = RansomwaretrackerItem()
                     ransomitem["submit_time"] = record[0]
                     ransomitem["threat"] = record[1]
@@ -50,8 +56,6 @@ class RansomwaretrackerSpider(scrapy.Spider):
                     ransomitem["country"] = record[9]
                     ransomitem["add_time"] = datetime.utcnow()
                     yield ransomitem
-            self.config.set(self.name, "last_time", response.body.split("\n")[9].split(",")[1])
-            self.config.write(open("scrapy.cfg", "w+"))
 
     def close(spider, reason):
         end = datetime.now()
