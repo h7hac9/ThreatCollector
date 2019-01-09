@@ -4,6 +4,7 @@ from datetime import datetime
 from ConfigParser import ConfigParser
 
 from ThreatCollector.items import RansomwaretrackerItem
+from ThreatCollector.Libraries.threat_email import ThreatEmail
 
 
 class RansomwaretrackerSpider(scrapy.Spider):
@@ -13,6 +14,16 @@ class RansomwaretrackerSpider(scrapy.Spider):
 
     config = ConfigParser()
     config.read("scrapy.cfg")
+
+    def start_requests(self):
+        self.start = datetime.now()
+
+        email_message = "The {} start at {}".format(self.name, self.start)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(self.name, "administrator", "{} spider information".format(self.name), email_message)
+
+        yield scrapy.Request(url='http://ansomwaretracker.abuse.ch/', callback=self.parse)
 
     def parse(self, response):
 
@@ -38,3 +49,11 @@ class RansomwaretrackerSpider(scrapy.Spider):
                     yield ransomitem
             self.config.set(self.name, "last_time", response.body.split("\n")[9].split(",")[1])
             self.config.write(open("scrapy.cfg", "w+"))
+
+    def close(spider, reason):
+        end = datetime.now()
+
+        email_message = "The {} start at {}, and end at {}".format(spider.name, spider.start, end)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(spider.name, "administrator", "{} spider information".format(spider.name), email_message)

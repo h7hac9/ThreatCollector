@@ -4,6 +4,7 @@ from datetime import datetime
 from ConfigParser import ConfigParser
 
 from ThreatCollector.items import TorIpItem
+from ThreatCollector.Libraries.threat_email import ThreatEmail
 
 
 class ToripsSpider(scrapy.Spider):
@@ -13,6 +14,16 @@ class ToripsSpider(scrapy.Spider):
 
     config = ConfigParser()
     config.read("scrapy.cfg")
+
+    def start_requests(self):
+        self.start = datetime.now()
+
+        email_message = "The {} start at {}".format(self.name, self.start)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(self.name, "administrator", "{} spider information".format(self.name), email_message)
+
+        yield scrapy.Request(url='https://www.dan.me.uk/torlist/', callback=self.parse)
 
     def parse(self, response):
 
@@ -37,3 +48,11 @@ class ToripsSpider(scrapy.Spider):
 
         self.config.set(self.name, "last_ip", tor_ips[0])
         self.config.write(open("scrapy.cfg", "w+"))
+
+    def close(spider, reason):
+        end = datetime.now()
+
+        email_message = "The {} start at {}, and end at {}".format(spider.name, spider.start, end)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(spider.name, "administrator", "{} spider information".format(spider.name), email_message)

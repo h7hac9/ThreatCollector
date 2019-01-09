@@ -6,12 +6,23 @@ from datetime import datetime
 import scrapy
 
 from ThreatCollector.items import HostsFileItem
+from ThreatCollector.Libraries.threat_email import ThreatEmail
 
 
 class HostsFileSpider(scrapy.Spider):
     name = 'hosts-file'
     allowed_domains = ['hosts-file.net']
     start_urls = ['https://hosts-file.net/rss.asp']
+
+    def start_requests(self):
+        self.start = datetime.now()
+
+        email_message = "The {} start at {}".format(self.name, self.start)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(self.name, "administrator", "{} spider information".format(self.name), email_message)
+
+        yield scrapy.Request(url='https://hosts-file.net/rss.asp', callback=self.parse)
 
     def parse(self, response):
         # 使用RSS文件解析
@@ -42,3 +53,11 @@ class HostsFileSpider(scrapy.Spider):
                 yield host_file_item
 
         print "========>Synchronization Complete<========"
+
+    def close(spider, reason):
+        end = datetime.now()
+
+        email_message = "The {} start at {}, and end at {}".format(spider.name, spider.start, end)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(spider.name, "administrator", "{} spider information".format(spider.name), email_message)

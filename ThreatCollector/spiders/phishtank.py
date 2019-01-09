@@ -5,6 +5,7 @@ import re
 from ConfigParser import ConfigParser
 
 from ThreatCollector.items import PhishtankItem
+from ThreatCollector.Libraries.threat_email import ThreatEmail
 
 
 class PhishtankSpider(scrapy.Spider):
@@ -18,6 +19,16 @@ class PhishtankSpider(scrapy.Spider):
     config_new_id = "0"
 
     count = 0
+
+    def start_requests(self):
+        self.start = datetime.now()
+
+        email_message = "The {} start at {}".format(self.name, self.start)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(self.name, "administrator", "{} spider information".format(self.name), email_message)
+
+        yield scrapy.Request(url='http://phishtank.com/phish_archive.php', callback=self.parse)
 
     def parse(self, response):
         last_id = response.css("tr td a::text").extract_first()
@@ -86,3 +97,11 @@ class PhishtankSpider(scrapy.Spider):
 
             next_right_short_url = response.css("td b a").xpath("@href").extract()[1]
             yield scrapy.Request(response.urljoin(next_right_short_url), callback=self.next_page_parse)
+
+    def close(spider, reason):
+        end = datetime.now()
+
+        email_message = "The {} start at {}, and end at {}".format(spider.name, spider.start, end)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail(spider.name, "administrator", "{} spider information".format(spider.name), email_message)

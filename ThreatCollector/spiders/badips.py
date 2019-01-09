@@ -5,17 +5,27 @@ from datetime import datetime
 from ConfigParser import ConfigParser
 
 from ThreatCollector.items import BadipsItem
+from ThreatCollector.Libraries.threat_email import ThreatEmail
 
 
 class BadipsSpider(scrapy.Spider):
     name = 'badips'
     allowed_domains = ['badips.com']
-    start_urls = ['https://www.badips.com/info']
 
     conf = ConfigParser()
     conf.read("scrapy.cfg")
 
     queue_set = []
+
+    def start_requests(self):
+        self.start = datetime.now()
+
+        email_message = "The badips start at {}".format(self.start)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail("badips", "administrator", "badips spider information", email_message)
+
+        yield scrapy.Request(url='https://www.badips.com/info', callback=self.parse)
 
     def parse(self, response):
         uris = response.css("div#content a").xpath("@href").extract()
@@ -86,6 +96,14 @@ class BadipsSpider(scrapy.Spider):
             next_list_index = next.index("next page>")
             next_uri = response.css("div#content>p.badips>a").xpath("@href").extract()[next_list_index]
             yield scrapy.Request(next_uri, callback=self.next_page_parse)
+
+    def close(spider, reason):
+        end = datetime.now()
+
+        email_message = "The badips start at {}, and end at {}".format(spider.start, end)
+
+        threat_email = ThreatEmail()
+        threat_email.send_mail("badips", "administrator", "badips spider information", email_message)
 
     def handle_arrays(self, src_list):
 
