@@ -79,7 +79,7 @@ class PhishtankSpider(scrapy.Spider):
         self.count += 1
         short_urls = response.css("tr td a").xpath("@href").extract()
 
-        if self.count < 5000:
+        if self.count < 1000:
             for short_url in short_urls:
                 if "phish_id" in short_url:
                     yield scrapy.Request(response.urljoin(short_url), callback=self.detailed_parse)
