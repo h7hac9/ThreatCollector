@@ -14,13 +14,19 @@ class HostsFileSpider(scrapy.Spider):
     allowed_domains = ['hosts-file.net']
     start_urls = ['https://hosts-file.net/rss.asp']
 
+    config = ConfigParser()
+    config.read("scrapy.cfg")
+
     def start_requests(self):
         self.start = datetime.now()
 
         email_message = "The {} start at {}".format(self.name, self.start)
 
         threat_email = ThreatEmail()
-        threat_email.send_mail(self.name, "administrator", "{} spider information".format(self.name), email_message)
+        threat_email.send_mail(self.config.get("email_service", "user_name"),
+                               self.config.get("email_service", "receivers"),
+                               "{} spider information".format(self.name),
+                               email_message)
 
         yield scrapy.Request(url='https://hosts-file.net/rss.asp', callback=self.parse)
 
@@ -60,4 +66,7 @@ class HostsFileSpider(scrapy.Spider):
         email_message = "The {} start at {}, and end at {}".format(spider.name, spider.start, end)
 
         threat_email = ThreatEmail()
-        threat_email.send_mail(spider.name, "administrator", "{} spider information".format(spider.name), email_message)
+        threat_email.send_mail(spider.config.get("email_service", "user_name"),
+                               spider.config.get("email_service", "receivers"),
+                               "{} spider information".format(spider.name),
+                               email_message)

@@ -26,7 +26,10 @@ class PhishtankSpider(scrapy.Spider):
         email_message = "The {} start at {}".format(self.name, self.start)
 
         threat_email = ThreatEmail()
-        threat_email.send_mail(self.name, "administrator", "{} spider information".format(self.name), email_message)
+        threat_email.send_mail(self.config.get("email_service", "user_name"),
+                               self.config.get("email_service", "receivers"),
+                               "{} spider information".format(self.name),
+                               email_message)
 
         yield scrapy.Request(url='http://phishtank.com/phish_archive.php', callback=self.parse)
 
@@ -104,4 +107,7 @@ class PhishtankSpider(scrapy.Spider):
         email_message = "The {} start at {}, and end at {}".format(spider.name, spider.start, end)
 
         threat_email = ThreatEmail()
-        threat_email.send_mail(spider.name, "administrator", "{} spider information".format(spider.name), email_message)
+        threat_email.send_mail(spider.config.get("email_service", "user_name"),
+                               spider.config.get("email_service", "receivers"),
+                               "{} spider information".format(spider.name),
+                               email_message)

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e0da1c9-297e-4f9d-9a13-89f71ea00aa2" name="Default Changelist" comment="">
+    <list default="true" id="1e0da1c9-297e-4f9d-9a13-89f71ea00aa2" name="Default Changelist" comment="repair email remind">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/badips.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/badips.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/torips.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/torips.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2332">
-              <caret line="106" column="120" selection-start-line="100" selection-start-column="4" selection-end-line="106" selection-end-column="120" />
+            <state relative-caret-position="281">
+              <caret line="16" column="29" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -29,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1276">
-              <caret line="58" column="120" selection-start-line="52" selection-start-column="3" selection-end-line="58" selection-end-column="120" />
+            <state relative-caret-position="1408">
+              <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -41,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/torips.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="57" column="120" selection-start-line="57" selection-start-column="120" selection-end-line="57" selection-end-column="120" />
+            <state relative-caret-position="426">
+              <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -50,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/badips.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="105" column="101" selection-start-line="99" selection-start-column="4" selection-end-line="105" selection-end-column="101" />
+            <state relative-caret-position="133">
+              <caret line="111" column="41" lean-forward="true" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -65,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="49" column="120" selection-start-line="43" selection-start-column="4" selection-end-line="49" selection-end-column="120" />
+            <state relative-caret-position="154">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -77,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="62" column="120" selection-start-line="62" selection-start-column="120" selection-end-line="62" selection-end-column="120" />
+            <state relative-caret-position="-1033">
+              <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
               <folding>
                 <element signature="e#25#62#0" expanded="true" />
               </folding>
@@ -89,38 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapy.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="10" selection-start-line="9" selection-end-line="12" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2024">
-              <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/smtplib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6116">
-              <caret line="284" selection-start-line="284" selection-end-line="284" />
+            <state relative-caret-position="176">
+              <caret line="8" column="9" selection-start-line="8" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -159,15 +135,15 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ThreatCollector/libraries/email.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/Libraries/email.py" />
-        <option value="$PROJECT_DIR$/ThreatCollector/spiders/badips.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/settings.py" />
-        <option value="$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py" />
-        <option value="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" />
+        <option value="$PROJECT_DIR$/scrapy.cfg" />
+        <option value="$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/torips.py" />
-        <option value="$PROJECT_DIR$/scrapy.cfg" />
-        <option value="$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py" />
+        <option value="$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py" />
+        <option value="$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py" />
+        <option value="$PROJECT_DIR$/ThreatCollector/spiders/badips.py" />
       </list>
     </option>
   </component>
@@ -219,7 +195,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547022256911" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547023833874" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -273,7 +249,7 @@
       <workItem from="1547016629850" duration="78000" />
       <workItem from="1547016904534" duration="3334000" />
       <workItem from="1547021232789" duration="778000" />
-      <workItem from="1547022703980" duration="67000" />
+      <workItem from="1547022703980" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed looping listener">
       <created>1546682272683</created>
@@ -429,17 +405,31 @@
       <option name="project" value="LOCAL" />
       <updated>1547021770047</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add email remind">
+      <created>1547022780577</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1547022780577</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add email remind">
+      <created>1547023077497</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1547023077497</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56337000" />
+    <option name="totallyTimeSpent" value="57148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18097281" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18097281" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -459,7 +449,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.39111593" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -507,6 +497,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/ThreatCollector" />
@@ -523,7 +523,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="repair phishtank crawl" />
     <MESSAGE value="add email remind" />
-    <option name="LAST_COMMIT_MESSAGE" value="add email remind" />
+    <MESSAGE value="repair email remind" />
+    <option name="LAST_COMMIT_MESSAGE" value="repair email remind" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/threat collector.md">
@@ -582,56 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2332">
-          <caret line="106" column="120" selection-start-line="100" selection-start-column="4" selection-end-line="106" selection-end-column="120" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="58" column="120" selection-start-line="52" selection-start-column="3" selection-end-line="58" selection-end-column="120" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/torips.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="57" column="120" selection-start-line="57" selection-start-column="120" selection-end-line="57" selection-end-column="120" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/badips.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="105" column="101" selection-start-line="99" selection-start-column="4" selection-end-line="105" selection-end-column="101" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="120" selection-start-line="62" selection-start-column="120" selection-end-line="62" selection-end-column="120" />
-          <folding>
-            <element signature="e#25#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2024">
@@ -641,34 +592,84 @@
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/smtplib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6116">
-          <caret line="284" selection-start-line="284" selection-end-line="284" />
+        <state relative-caret-position="378">
+          <caret line="546" column="13" selection-start-line="546" selection-start-column="8" selection-end-line="546" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="10" selection-start-line="9" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="176">
+          <caret line="8" column="9" selection-start-line="8" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py">
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/torips.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="49" column="120" selection-start-line="43" selection-start-column="4" selection-end-line="49" selection-end-column="120" />
+        <state relative-caret-position="426">
+          <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py">
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="281">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/blocklist_de.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1033">
+          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+          <folding>
+            <element signature="e#25#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/badips.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="111" column="41" lean-forward="true" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -23,7 +23,10 @@ class BadipsSpider(scrapy.Spider):
         email_message = "The badips start at {}".format(self.start)
 
         threat_email = ThreatEmail()
-        threat_email.send_mail("badips", "administrator", "badips spider information", email_message)
+        threat_email.send_mail(self.conf.get("email_service", "user_name"),
+                               self.conf.get("email_service", "receivers"),
+                               "{} spider information".format(self.name),
+                               email_message)
 
         yield scrapy.Request(url='https://www.badips.com/info', callback=self.parse)
 
@@ -103,7 +106,10 @@ class BadipsSpider(scrapy.Spider):
         email_message = "The badips start at {}, and end at {}".format(spider.start, end)
 
         threat_email = ThreatEmail()
-        threat_email.send_mail("badips", "administrator", "badips spider information", email_message)
+        threat_email.send_mail(spider.conf.get("email_service", "user_name"),
+                               spider.conf.get("email_service", "receivers"),
+                               "{} spider information".format(spider.name),
+                               email_message)
 
     def handle_arrays(self, src_list):
 

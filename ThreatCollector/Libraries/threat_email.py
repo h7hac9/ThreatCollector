@@ -10,7 +10,7 @@ class ThreatEmail(object):
     config = ConfigParser()
     config.read("scrapy.cfg")
 
-    sender = "scrapy@threat.com"
+    sender = config.get("email_service", "user_name")
     receivers = config.get("email_service", "receivers").split(";")
 
     def send_mail(self, from_user, to_user, subject, email_message):
