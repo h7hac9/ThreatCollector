@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e0da1c9-297e-4f9d-9a13-89f71ea00aa2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/pipelines.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,13 +26,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+              <folding>
+                <element signature="e#194#208#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,7 +149,6 @@
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/crawl.ini" />
         <option value="$PROJECT_DIR$/crawl.ini" />
         <option value="$PROJECT_DIR$/ThreatCollector/items.py" />
-        <option value="$PROJECT_DIR$/ThreatCollector/pipelines.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ThreatCollector/libraries/email.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/Libraries/email.py" />
@@ -151,6 +161,7 @@
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/badips.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/Libraries/threat_email.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py" />
+        <option value="$PROJECT_DIR$/ThreatCollector/pipelines.py" />
       </list>
     </option>
   </component>
@@ -202,7 +213,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547025027028" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547025413689" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -256,7 +267,7 @@
       <workItem from="1547016629850" duration="78000" />
       <workItem from="1547016904534" duration="3334000" />
       <workItem from="1547021232789" duration="778000" />
-      <workItem from="1547022703980" duration="1522000" />
+      <workItem from="1547022703980" duration="1769000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed looping listener">
       <created>1546682272683</created>
@@ -433,11 +444,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547023850540</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="ransomwaretracker crawl">
+      <created>1547025037567</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1547025037567</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57792000" />
+    <option name="totallyTimeSpent" value="58039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -463,7 +481,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.39111593" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -532,13 +550,13 @@
     <MESSAGE value="Add phishing site threat intelligence and limit crawling rate" />
     <MESSAGE value="Add badips crawl" />
     <MESSAGE value="repair badips crawl" />
-    <MESSAGE value="ransomwaretracker crawl" />
     <MESSAGE value="Add torips crawl" />
     <MESSAGE value="init" />
     <MESSAGE value="repair phishtank crawl" />
     <MESSAGE value="add email remind" />
     <MESSAGE value="repair email remind" />
-    <option name="LAST_COMMIT_MESSAGE" value="repair email remind" />
+    <MESSAGE value="ransomwaretracker crawl" />
+    <option name="LAST_COMMIT_MESSAGE" value="ransomwaretracker crawl" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/threat collector.md">
@@ -574,16 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
           <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding>
-            <element signature="e#194#208#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -684,6 +692,16 @@
           <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
           </folding>
         </state>
       </provider>
