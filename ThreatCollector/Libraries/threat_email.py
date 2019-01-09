@@ -20,7 +20,8 @@ class ThreatEmail(object):
         message['Subject'] = Header(subject, 'utf-8')
 
         try:
-            smtpObj = smtplib.SMTP('localhost', port=1025)
+            port = self.config.get("email_service", "port")
+            smtpObj = smtplib.SMTP('localhost', port=int(port))
             smtpObj.sendmail(self.sender, self.receivers, message.as_string())
             print "邮件发送成功"
         except smtplib.SMTPException:
