@@ -25,7 +25,7 @@ class ThreatEmail(object):
             user_name = self.config.get("email_service", "user_name")
             password = self.config.get("email_service", "password")
             smtpObj = smtplib.SMTP_SSL(host,port)
-            smtplib.login(user_name, password)
+            smtpObj.login(user_name, password)
             smtpObj.sendmail(self.sender, self.receivers, message.as_string())
             smtpObj.close()
             print "邮件发送成功"
