@@ -9,8 +9,8 @@ from ThreatCollector.Libraries.threat_email import ThreatEmail
 
 class RansomwaretrackerSpider(scrapy.Spider):
     name = 'ransomwaretracker'
-    allowed_domains = ['ansomwaretracker.abuse.ch']
-    start_urls = ['http://ansomwaretracker.abuse.ch/']
+    allowed_domains = ['ransomwaretracker.abuse.ch']
+    start_urls = ['https://ransomwaretracker.abuse.ch/feeds/csv/']
 
     config = ConfigParser()
     config.read("scrapy.cfg")

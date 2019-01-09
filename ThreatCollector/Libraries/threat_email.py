@@ -14,7 +14,7 @@ class ThreatEmail(object):
     receivers = config.get("email_service", "receivers").split(";")
 
     def send_mail(self, from_user, to_user, subject, email_message):
-        message = MIMEText(email_message, "plain", "utf-8")
+        message = MIMEText(email_message)
         message['From'] = from_user
         message['To'] = to_user
         message['Subject'] = Header(subject, 'utf-8')
