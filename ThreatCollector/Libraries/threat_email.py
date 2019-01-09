@@ -23,12 +23,11 @@ class ThreatEmail(object):
             host = self.config.get("email_service", "host")
             port = self.config.get("email_service", "port")
             user_name = self.config.get("email_service", "user_name")
-            password =  self.config.get("email_service", "password")
-            smtpObj = smtplib.SMTP()
-            smtpObj.connect(host=host, port=port)
-            smtplib.login()
+            password = self.config.get("email_service", "password")
+            smtpObj = smtplib.SMTP_SSL(host,port)
+            smtplib.login(user_name, password)
             smtpObj.sendmail(self.sender, self.receivers, message.as_string())
-            smtpObj.quit()
+            smtpObj.close()
             print "邮件发送成功"
         except smtplib.SMTPException:
             print "Error: 无法发送邮件"
