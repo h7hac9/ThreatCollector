@@ -24,6 +24,9 @@ class PhishtankSpider(scrapy.Spider):
         short_urls = response.css("tr td a").xpath("@href").extract()
         find_id = self.config.get(self.name, "last_id")
 
+        if int(last_id) > int(self.config_new_id):
+            self.config_new_id = last_id
+
         if find_id == "":
 
             self.config.set(self.name, "last_id", last_id)
@@ -51,9 +54,6 @@ class PhishtankSpider(scrapy.Spider):
                 else:
                     next_short_url = response.css("td b a").xpath("@href").extract_first()
                     yield scrapy.Request(response.urljoin(next_short_url), callback=self.parse)
-
-            if int(last_id) > int(self.config_new_id):
-                self.config_new_id = last_id
 
             for short_url in short_urls[:last_index]:
                 if "phish_id" in short_url:

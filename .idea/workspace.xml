@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e0da1c9-297e-4f9d-9a13-89f71ea00aa2" name="Default Changelist" comment="Add torips crawl">
+    <list default="true" id="1e0da1c9-297e-4f9d-9a13-89f71ea00aa2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreatCollector/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,57 +13,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/torips.py">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+            <state relative-caret-position="406">
+              <caret line="77" column="40" lean-forward="true" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="711">
-                <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/items.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThreatCollector/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-              <folding>
-                <element signature="e#194#208#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -98,12 +53,12 @@
         <option value="$PROJECT_DIR$/ThreatCollector/settings.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/badips.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/ransomwaretracker.py" />
-        <option value="$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/items.py" />
         <option value="$PROJECT_DIR$/ThreatCollector/pipelines.py" />
-        <option value="$PROJECT_DIR$/scrapy.cfg" />
         <option value="$PROJECT_DIR$/ThreatCollector/spiders/torips.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/scrapy.cfg" />
+        <option value="$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py" />
       </list>
     </option>
   </component>
@@ -118,6 +73,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,14 +96,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546783585788" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547013969994" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -197,7 +152,8 @@
       <workItem from="1546932953319" duration="148000" />
       <workItem from="1546935373531" duration="226000" />
       <workItem from="1546943626060" duration="621000" />
-      <workItem from="1547005286415" duration="766000" />
+      <workItem from="1547005286415" duration="1435000" />
+      <workItem from="1547016629850" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed looping listener">
       <created>1546682272683</created>
@@ -311,17 +267,31 @@
       <option name="project" value="LOCAL" />
       <updated>1546944839361</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add torips crawl">
+      <created>1547006064914</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1547006064914</updated>
+    </task>
+    <task id="LOCAL-00018" summary="init">
+      <created>1547012163953</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1547012163953</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51411000" />
+    <option name="totallyTimeSpent" value="52120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17525035" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -401,7 +371,9 @@
     <MESSAGE value="repair badips crawl" />
     <MESSAGE value="ransomwaretracker crawl" />
     <MESSAGE value="repair phishtank crawl" />
-    <option name="LAST_COMMIT_MESSAGE" value="repair phishtank crawl" />
+    <MESSAGE value="Add torips crawl" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/threat collector.md">
@@ -450,16 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/hosts_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -504,23 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/torips.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -528,6 +473,33 @@
             <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/torips.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreatCollector/spiders/phishtank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="77" column="40" lean-forward="true" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
