@@ -48,8 +48,9 @@ class ToripsSpider(scrapy.Spider):
             tor_ip["add_time"] = datetime.utcnow()
             yield tor_ip
 
-        self.config.set(self.name, "last_ip", tor_ips[0])
-        self.config.write(open("scrapy.cfg", "w+"))
+        if end_station != 0:
+            self.config.set(self.name, "last_ip", tor_ips[0])
+            self.config.write(open("scrapy.cfg", "w+"))
 
     def close(spider, reason):
         end = datetime.now()
