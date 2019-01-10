@@ -63,3 +63,8 @@ class RansomwaretrackerItem(scrapy.Item):
 class TorIpItem(scrapy.Item):
     ip = scrapy.Field()
     add_time = scrapy.Field()
+
+
+class GreensnowItem(scrapy.Item):
+    ip = scrapy.Field()
+    add_time = scrapy.Field()
