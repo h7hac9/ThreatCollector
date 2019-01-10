@@ -12,8 +12,8 @@ class GreensnowSpider(scrapy.Spider):
 
     def parse(self, response):
 
-        for i in response.body.strip("\n").split("\n"):
+        for ip in response.body.strip("\n").split("\n"):
             greensnow_blockip = GreensnowItem()
-            greensnow_blockip["ip"] = i
+            greensnow_blockip["ip"] = ip
             greensnow_blockip["add_time"] = datetime.utcnow()
             yield greensnow_blockip

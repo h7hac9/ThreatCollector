@@ -53,6 +53,9 @@ class MongoDBPipeline(object):
         if spider.name == "greensnow":
             table.ensure_index("ip")
 
+        if spider.name == "openphish":
+            table.ensure_index("url")
+
         table.create_index("add_time", expireAfterSeconds=int(config.get(spider.name, "expire_time")))
         quote_into = dict(item)
         table.insert(quote_into)

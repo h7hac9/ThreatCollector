@@ -68,3 +68,8 @@ class TorIpItem(scrapy.Item):
 class GreensnowItem(scrapy.Item):
     ip = scrapy.Field()
     add_time = scrapy.Field()
+
+
+class OpenphishItem(scrapy.Item):
+    url = scrapy.Field()
+    add_time = scrapy.Field()
