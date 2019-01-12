@@ -37,7 +37,7 @@ class ToripsSpider(scrapy.Spider):
             end_station = len(tor_ips)
 
         elif last_ip in tor_ips:
-            end_station = tor_ips.index(last_ip)+1
+            end_station = tor_ips.index(last_ip)
 
         else:
             end_station = 0
